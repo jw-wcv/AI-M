@@ -57,7 +57,6 @@ public class SimplexNoise
         Vector3 g1 = locationMapData.Grad3[gi1];
         Vector3 g2 = locationMapData.Grad3[gi2];
 
-
         float n0, n1, n2;
         float t0 = 0.5f - x0 * x0 - y0 * y0;
         if (t0 < 0)
@@ -88,6 +87,7 @@ public class SimplexNoise
 
         noiseValue += 70.0f * (n0 + n1 + n2);
         Debug.Log("NoiseValue: " + noiseValue);
+        noiseValue = (noiseValue/100);
 
             return noiseValue;
         }
