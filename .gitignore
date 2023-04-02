@@ -1,2 +1,5 @@
 node_modules/
 unity/Library/PackageCache
+unity/Library/
+unity/Temp
+unity/Logs

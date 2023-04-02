@@ -19,15 +19,6 @@ public class SimplexNoise
                 throw new ArgumentNullException("locationMapData", "LocationMapData parameter cannot be null");
             }
 
-             //new code below
-        foreach (var data in locationMapData)
-        {
-            Debug.Log("Grad3: " + data.Grad3);
-            Debug.Log("GradP: " + data.GradP);
-            Debug.Log("Perm: " + data.Perm);
-            Debug.Log("P: " + data.P);
-        }
-        //new code above
 
         float s = (x + y) * F2;
         int i = Mathf.FloorToInt(x + s);

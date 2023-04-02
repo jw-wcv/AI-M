@@ -14,7 +14,13 @@ public class ServerConnection : MonoBehaviour
 
     private void Start()
     {
+        try {
         StartCoroutine(GetTerrainData());
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"SimplexNoise.Generate Error: {ex.Message}");
+        }
     }
 
     private IEnumerator GetTerrainData()
@@ -114,7 +120,10 @@ public class ServerConnection : MonoBehaviour
                     // Get the ProceduralMapGenerator component attached to the Terrain game object
                     ProceduralMapGenerator mapGenerator = GameObject.Find("Terrain").GetComponent<ProceduralMapGenerator>();
 
+                    Debug.Log(mapGenerator);
+
                     // Call GenerateMap method passing in the noise map data
+                    Debug.Log("Calling Map Generator");
                     mapGenerator.GenerateMap(locationMapData);
 
                     // Access the NPCs
