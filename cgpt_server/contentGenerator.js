@@ -1,7 +1,7 @@
 // OpenAI GPT-3 configuration
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-    apiKey: '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',
+    apiKey: 'Add and Use .Env',
   });
 const openai = new OpenAIApi(configuration);
 
